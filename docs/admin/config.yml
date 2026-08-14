@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: YOURUSERNAME/YOURREPO   # <-- change me (e.g. jane/acme-docs)
+  branch: main
+  # Only needed for OAuth "Sign in with GitHub" login (Phase 3 in the README).
+  # For the POC, skip this and log in with a personal access token instead.
+  # base_url: https://your-auth-worker.YOURNAME.workers.dev
+
+media_folder: docs/images
+public_folder: /images
+
+# Draft -> review -> publish via pull requests.
+# Delete this line if you'd rather saves commit straight to main.
+publish_mode: editorial_workflow
+
+collections:
+  - name: guides
+    label: Guides
+    label_singular: Guide
+    folder: docs/guides
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Short description, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: faq
+    label: FAQ
+    label_singular: FAQ page
+    folder: docs/faq
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Short description, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: release_notes
+    label: Release notes
+    label_singular: Release note
+    folder: docs/release-notes
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { name: description, label: Short description, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: pages
+    label: Top-level pages
+    label_singular: Page
+    folder: docs
+    create: false
+    fields:
+      - { name: title, label: Title, widget: string, required: false }
+      - { name: description, label: Short description, widget: string, required: false }
+      - { name: body, label: Body, widget: markdown }
