@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOURUSERNAME/YOURREPO   # <-- change me (e.g. jane/acme-docs)
+  repo: Robbie-Goff/poc_acme-docs   # <-- change me (e.g. jane/acme-docs)
   branch: main
   # Only needed for OAuth "Sign in with GitHub" login (Phase 3 in the README).
   # For the POC, skip this and log in with a personal access token instead.
