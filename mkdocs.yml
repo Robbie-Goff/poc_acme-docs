@@ -1,7 +1,7 @@
 # Replace these three values with your own
 site_name: Acme Docs (POC)
-site_url: https://YOURUSERNAME.github.io/YOURREPO/
-repo_url: https://github.com/YOURUSERNAME/YOURREPO
+site_url: https://Robbie-Goff.github.io/poc_acme-docs/
+repo_url: https://github.com/Robbie-Goff/poc_acme-docs
 
 theme:
   name: material
