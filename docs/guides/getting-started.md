@@ -10,6 +10,10 @@ uses a bit of everything — headings, lists, links, callouts, a table, and a
 code block — so you can check they all survive a round-trip through the
 editor.
 
+# New Block
+
+Test.
+
 ## What this site is
 
 All pages here are plain Markdown files stored in a GitHub repository. When
